@@ -56,6 +56,18 @@ string moveallX(string s){
         return ch+ans;
     }
 }
+//Generate all substrings of a string 
+void subseq(string s,string ans){
+    if(s.length()==0){
+        cout<<ans<<" ";
+        return;
+    }
+    char ch=s[0];
+    string ros=s.substr(1);
+    subseq(ros,ans);
+    subseq(ros,ans+ch);
+}
+//Generate sbstring with ascii number 
 int main(){
     reverse("binod");
     cout<<endl;
@@ -66,4 +78,6 @@ int main(){
     cout<<removeDup("aaaabbbeeecddd");
     cout<<endl;
     cout<<moveallX("xabxaxbac");
+    cout<<endl;
+    subseq("ABC","");
 }
