@@ -68,6 +68,17 @@ void subseq(string s,string ans){
     subseq(ros,ans+ch);
 }
 //Generate sbstring with ascii number 
+void subseqASCII(string s,string ans){
+    if(s.length==0){
+        cout<<ans<<"";
+    }
+    char ch=s[0];
+    int code=ch;
+    string ros=s.substr(1);
+    subseqASCII(ros,ans);
+    subseqASCII(ros,ans+ch);
+    subseqASCII(ros,ans+code);
+}
 int main(){
     reverse("binod");
     cout<<endl;
@@ -80,4 +91,6 @@ int main(){
     cout<<moveallX("xabxaxbac");
     cout<<endl;
     subseq("ABC","");
+    cout<<endl;
+    subseqASCII("ABC","");
 }
