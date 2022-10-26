@@ -77,7 +77,7 @@ void subseqASCII(string s,string ans){
     string ros=s.substr(1);
     subseqASCII(ros,ans);
     subseqASCII(ros,ans+ch);
-    subseqASCII(ros,ans+code);
+    subseqASCII(ros,ans+to_string(code));
 }
 int main(){
     reverse("binod");
