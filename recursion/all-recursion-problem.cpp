@@ -43,6 +43,19 @@ string removeDup(string s){
     }
     return (ch+ans);
 }
+//Move all x to the end of the string
+string moveallX(string s){
+    if(s.length()==0){
+        return "";
+    }
+    char ch=s[0];
+    string ans=moveallX(s.substr(1));
+    if(ch=='x'){
+        return ans+ch;
+    }else{
+        return ch+ans;
+    }
+}
 int main(){
     reverse("binod");
     cout<<endl;
@@ -51,4 +64,6 @@ int main(){
     towerofHanoi(6,'A','C','B');
     cout<<endl;
     cout<<removeDup("aaaabbbeeecddd");
+    cout<<endl;
+    cout<<moveallX("xabxaxbac");
 }
