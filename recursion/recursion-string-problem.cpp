@@ -69,8 +69,9 @@ void subseq(string s,string ans){
 }
 //Generate sbstring with ascii number 
 void subseqASCII(string s,string ans){
-    if(s.length==0){
+    if(s.length()==0){
         cout<<ans<<" ";
+        return;
     }
     char ch=s[0];
     int code=ch;
@@ -93,12 +94,13 @@ void keypad(string s,string ans){
         keypad(ros,ans+code[i]);
     }
 }
+
 int main(){
     reverse("binod");
     cout<<endl;
     replaePi("pippxxppiixipi");
     cout<<endl;
-    towerofHanoi(6,'A','C','B');
+    towerofHanoi(3,'A','C','B');
     cout<<endl;
     cout<<removeDup("aaaabbbeeecddd");
     cout<<endl;
@@ -106,7 +108,7 @@ int main(){
     cout<<endl;
     subseq("ABC","");
     cout<<endl;
-    subseqASCII("ABC","");
+    subseqASCII("AB","");
     cout<<endl;
-    keypad("23","")
+    keypad("23","");
 }
