@@ -47,7 +47,12 @@ int tilingways(int n){
     return tilingways(n-1) + tilingways(n-2);
 }
 //Friend's Pairing problem
-
+int friendspairing(int n){
+    if(n==0|| n==1 || n==2){
+        return n;
+    }
+    return friendspairing(n-1) + friendspairing(n-2)*(n-1);
+}
 int main(){
     permutations("ABC","");
     cout<<endl;
@@ -56,4 +61,6 @@ int main(){
     cout<<countPathMaze(3,0,0);
     cout<<endl;
     cout<<tilingways(4);
+    cout<<endl;
+    cout<<friendspairing(4);
 }  
