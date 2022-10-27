@@ -36,10 +36,24 @@ int countPathMaze(int n,int i,int j){
     }
     return countPathMaze(n,i+1,j) + countPathMaze(n,i,j+1);
 }
+//Tiling Problem
+int tilingways(int n){
+    if(n==0){
+        return 0;
+    }
+    if(n==1){
+        return 1;
+    }
+    return tilingways(n-1) + tilingways(n-2);
+}
+//Friend's Pairing problem
+
 int main(){
     permutations("ABC","");
     cout<<endl;
     cout<<countpath(0,3);
     cout<<endl;
     cout<<countPathMaze(3,0,0);
-}
+    cout<<endl;
+    cout<<tilingways(4);
+}  
