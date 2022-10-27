@@ -70,7 +70,7 @@ void subseq(string s,string ans){
 //Generate sbstring with ascii number 
 void subseqASCII(string s,string ans){
     if(s.length==0){
-        cout<<ans<<"";
+        cout<<ans<<" ";
     }
     char ch=s[0];
     int code=ch;
@@ -78,6 +78,20 @@ void subseqASCII(string s,string ans){
     subseqASCII(ros,ans);
     subseqASCII(ros,ans+ch);
     subseqASCII(ros,ans+to_string(code));
+}
+//Print all possible words from phone digits 
+string keypadArr[]={"","","abc","def","ghi","jkl","mno","pqrs","tuv","wxyz"};
+void keypad(string s,string ans){
+    if(s.length()==0){
+        cout<<ans<<" ";
+        return;
+    }
+    char ch=s[0];
+    string code=keypadArr[ch-'0'];
+    string ros=s.substr(1);
+    for(int i=0;i<code.length();i++){
+        keypad(ros,ans+code[i]);
+    }
 }
 int main(){
     reverse("binod");
@@ -93,4 +107,6 @@ int main(){
     subseq("ABC","");
     cout<<endl;
     subseqASCII("ABC","");
+    cout<<endl;
+    keypad("23","")
 }
