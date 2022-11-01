@@ -32,12 +32,18 @@ int main(){
     }
     cout<<endl;
 
-    vector<int> v2 (3,50);
+    vector<int> v2 (3,50); //Declaration
+    
+    //Printing v2 using loop 
     for(int i=0;i<v2.size();i++){
         cout<<v2[i]<<" ";
     }
+    cout<<endl;
     
+    //Printing v2 using iterator
+    vector<int> ::iterator itt;
+    for(itt=v2.begin();itt!=v2.end();itt++){
+        cout<<*itt<<" ";
+    }
     return 0;
-    
-    
 }
