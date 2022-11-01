@@ -1,5 +1,6 @@
 #include<iostream>
 #include<vector>
+#include<algorithm>
 using namespace std;
 int main(){
     vector <int> v;
@@ -60,9 +61,9 @@ int main(){
     cout<<endl;
     
     //Sorting function
-    //sort(v.begin(),v.end());
-    for(auto element :v){
-        cout<<element<<" ";
+    sort(v2.begin(),v2.end());
+    for(int i=0;i<v2.size();i++){
+        cout<<v2[i]<<" ";
     }
     cout<<endl;
     
